@@ -12,5 +12,5 @@ export const MatchPin = styled.div<{ colour: string }>`
     border-radius: 50%;
     border: 2px solid #fff;
     background-color: ${({ colour }) => colour};
-    margin: 2px;
+    margin: 1px;
 `
