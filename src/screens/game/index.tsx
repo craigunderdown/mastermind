@@ -53,17 +53,19 @@ export const Game: FC<SetupProps> = ({ gameSetup, backToSettings }) => {
         const guessMatches: string[] = []
         const guessedArray: string[] = []
         const checkArray: string[] = []
+        const checkAnswers: string[] = []
 
         answer.forEach((ans, idx) => {
             if (guess.colours[idx] === ans) {
                 guessMatches.push('black')
             } else {
                 checkArray.push(guess.colours[idx])
+                checkAnswers.push(ans)
             }
             guessedArray.push(guess.colours[idx])
         })
 
-        answer.forEach((a, idx) => {
+        checkAnswers.forEach((a, idx) => {
             let foundIndex = -1
             if ((foundIndex = checkArray.indexOf(a)) !== -1) {
                 guessMatches.push('white')
