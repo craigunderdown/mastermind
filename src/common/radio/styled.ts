@@ -4,7 +4,6 @@ import { media } from '../styled-common'
 export const StyledRadioButton = styled.label`
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
     align-items: center;
 `
 
@@ -17,6 +16,7 @@ export const RadioIcon = styled.div<{ selected: boolean }>`
     border-radius: 50%;
     background-color: #727272;
     box-sizing: border-box;
+    margin-bottom: 10px;
 
     ${({ selected }) => selected && `
         background-color: #fff;

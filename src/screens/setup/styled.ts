@@ -10,7 +10,6 @@ export const SetupContainer = styled.div<{ visible: boolean }>`
     height: 100%;
     align-items: center;
     justify-content: center;
-    row-gap: 30px;
     z-index: 1;
     transition: all 300ms ease-in-out;
     background-color: #727272;
@@ -20,6 +19,10 @@ export const SetupContainer = styled.div<{ visible: boolean }>`
     ${({ visible }) => visible && `
         left: 0;
     `}
+
+    & > *:not(:last-child) {
+        margin-bottom: 30px;
+    }
 `;
 
 export const RadioContainer = styled.div`

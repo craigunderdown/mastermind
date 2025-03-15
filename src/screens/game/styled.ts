@@ -9,13 +9,17 @@ export const GameContainer = styled.div`
     width: 100%;
     height: 100%;
     align-items: center;
-    row-gap: 20px;
     z-index: 2;
     transition: all 300ms ease-in-out;
     background-color: #727272;
     padding: 10px;
     box-sizing: border-box;
     overflow-y: auto;
+    padding-top: 30px;
+
+    & > *:not(:last-child) {
+        margin-bottom: 20px;
+    }
 `;
 
 export const EndPanel = styled.div`
@@ -28,11 +32,14 @@ export const EndPanel = styled.div`
     height: 100%;
     align-items: center;
     justify-content: center;
-    row-gap: 20px;
     z-index: 3;
     transition: all 300ms ease-in-out;
     background-color: rgba(0,0,0,0.7);
     padding: 10px;
     box-sizing: border-box;
     overflow-y: auto;
+
+    & > *:not(:last-child) {
+        margin-bottom: 20px;
+    }
 `

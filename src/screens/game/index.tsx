@@ -64,9 +64,10 @@ export const Game: FC<SetupProps> = ({ gameSetup, backToSettings }) => {
         })
 
         answer.forEach((a, idx) => {
-            if (checkArray.includes(a)) {
+            let foundIndex = -1
+            if ((foundIndex = checkArray.indexOf(a)) !== -1) {
                 guessMatches.push('white')
-                checkArray.splice(idx, 1)
+                checkArray.splice(foundIndex, 1)
             }
         })
 
@@ -98,8 +99,6 @@ export const Game: FC<SetupProps> = ({ gameSetup, backToSettings }) => {
             />
         )
     }
-
-    console.log('+++++++', answer)
 
     return (
         <GameContainer>

@@ -10,7 +10,10 @@ export const HomeScreenContainer = styled.div`
     height: 100%;
     align-items: center;
     justify-content: center;
-    row-gap: 20px;
     padding: 10px;
     box-sizing: border-box;
+
+    & > *:not(:last-child) {
+        margin-bottom: 20px;
+    }
 `
